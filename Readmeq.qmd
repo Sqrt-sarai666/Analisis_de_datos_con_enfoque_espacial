@@ -1,0 +1,29 @@
+---
+title: "Análisis espacial de delitos CDMX"
+format: html
+editor: visual
+---
+
+## Analísis de incidencia delictiva
+
+Haciendo uso de los datos abiertos proporcionados por la FGJ, se hizo una exploracion de los datos para analisis espacial.
+
+```{r}
+library(leaflet)
+library(tidyverse)
+library(leaflet.extras)
+# library(h3jsr) 
+library(sf)
+```
+
+## Mapa usando leaflet
+
+Se uso la libreria de leaflet para hacer un mapa
+
+```{r}
+#| label: Limpieza de datos
+fgj = read_csv("data csv/victimasFGJ_2024.csv")
+d1 = fgj %>% filter(categoria_delito== "HOMICIDIO DOLOSO")
+```
+
+### ... En construcción ...
